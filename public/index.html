@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mestrado em Neuroscience for Business — Infinity Neurobusiness School</title>
+<meta name="description" content="Master of Science in Neuroscience for Business (MSc). Mestrado internacional 100% online, 72 créditos, dupla diplomação UniLogos. Coordenado pelo Dr. Tiago Cavalcanti Tabajara, PhD.">
+<meta property="og:title" content="Mestrado em Neuroscience for Business — Infinity Neurobusiness School">
+<meta property="og:description" content="A ponte entre a ciência e o mundo dos negócios. 100% online, título MSc stricto sensu, dupla diplomação.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET ─── */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+section{scroll-margin-top:96px}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+a{transition:opacity .2s,color .2s,transform .2s}
+
+/* ─── DESIGN TOKENS — GOLD THEME (default) ─── */
+:root{
+  --bg:#0c0a07;--bg-alt:#120f0a;--bg-dark:#0a0807;--bg-dark-2:#16130d;
+  --ink:#f5f0e4;--ink-soft:#cabfa9;--muted:#9a8f79;--line:rgba(255,255,255,.10);
+  --accent:#c69a35;--accent-2:#ddb455;--accent-ink:#ddb455;--tint:rgba(210,168,72,.14);
+  --glow:rgba(210,168,72,.18);
+  --on-dark:#f5f0e4;--on-dark-muted:#b4a991;--on-dark-line:rgba(255,255,255,.10);
+}
+
+/* ─── HEADER ─── */
+#site-header{position:fixed;top:0;left:0;right:0;z-index:120}
+#ann-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;font-size:12.5px;font-weight:600;letter-spacing:.04em;padding:9px 16px;font-family:'Hanken Grotesk',sans-serif}
+#ann-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;opacity:.9}
+#site-nav{
+  color:var(--on-dark);background:transparent;
+  transition:background .35s ease,color .35s ease,box-shadow .35s ease,border-color .35s ease;
+  border-bottom:1px solid transparent;
+}
+#site-nav.solid{
+  color:var(--ink);
+  background:color-mix(in srgb,var(--bg) 84%,transparent);
+  backdrop-filter:saturate(1.4) blur(16px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 8px 30px rgba(8,12,24,.07);
+}
+.nav-inner{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{color:inherit;text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.01em;opacity:.8}
+.nav-links a:hover{opacity:1}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:13.5px;letter-spacing:.02em;padding:11px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 22px var(--glow)}
+.nav-cta:hover{filter:brightness(1.08)}
+
+/* ─── HERO ─── */
+.hero{
+  position:relative;
+  background:radial-gradient(1100px 760px at 74% 20%,var(--glow),transparent 60%),var(--bg-dark);
+  color:var(--on-dark);
+  padding:250px 24px 70px;
+  overflow:hidden;
+}
+.hero-dot-grid{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:26px 26px;opacity:.6;pointer-events:none}
+.hero-glow-blob{position:absolute;top:-12%;right:-6%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 62%);filter:blur(8px);pointer-events:none}
+.hero-photo{position:absolute;top:0;bottom:0;right:0;width:min(880px,60%);background-image:url('images/foto-tiago-nova.webp');background-repeat:no-repeat;background-size:auto 90%;background-position:54% 24%;pointer-events:none}
+.hero-fade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,var(--bg-dark) 22%,color-mix(in srgb,var(--bg-dark) 52%,transparent) 47%,transparent 74%),linear-gradient(to top,var(--bg-dark) 6%,transparent 40%),linear-gradient(to bottom,var(--bg-dark) 0%,transparent 18%)}
+.hero-content{position:relative;max-width:1200px;margin:0 auto}
+.hero-left{max-width:560px}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--on-dark-line);background:rgba(255,255,255,.04);padding:7px 14px;border-radius:999px;font-family:'Space Grotesk',sans-serif;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark);margin-bottom:26px}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent-2)}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(46px,5.6vw,78px);line-height:1.0;letter-spacing:-.025em;margin:0 0 24px}
+.hero-h1 .accent{color:var(--accent-2)}
+.hero-lead{font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:var(--on-dark-muted);max-width:520px;margin:0 0 30px}
+.hero-lead strong{color:var(--on-dark);font-weight:600}
+.hero-coord{border-left:2px solid var(--accent-2);padding-left:16px;margin:0 0 30px}
+.hero-coord-name{font-weight:700;font-size:15px;color:var(--on-dark)}
+.hero-coord-title{font-size:13px;color:var(--accent-2);line-height:1.5;margin-top:2px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--on-dark-line);background:rgba(255,255,255,.03);border-radius:999px;padding:8px 14px;font-size:13px;color:var(--on-dark)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn-primary{display:inline-flex;align-items:center;gap:11px;background:#fff;color:#0b0f1c;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.01em;padding:16px 28px;border-radius:999px;box-shadow:0 14px 34px rgba(0,0,0,.34)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;color:var(--on-dark);text-decoration:none;font-weight:600;font-size:15px;padding:16px 8px;opacity:.92}
+.btn-ghost:hover{opacity:1}
+/* trust strip */
+.trust-strip{position:relative;max-width:1200px;margin:60px auto 0;padding-top:26px;border-top:1px solid var(--on-dark-line);display:flex;flex-direction:column;gap:20px}
+.trust-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-muted);font-family:'Space Grotesk',sans-serif}
+.trust-row{display:flex;flex-wrap:wrap;align-items:stretch;gap:24px}
+.trust-logos{display:flex;flex-direction:column;justify-content:center;gap:18px}
+.trust-logo-item{display:inline-flex;align-items:center;gap:12px}
+.trust-logo-item span{font-size:13px;color:var(--on-dark-muted);line-height:1.3}
+.trust-box{flex:1;min-width:280px;border:1px solid var(--on-dark-line);border-radius:14px;padding:22px 26px;background:rgba(255,255,255,.025);display:flex;align-items:center}
+.trust-box p{font-size:14.5px;line-height:1.65;color:var(--on-dark-muted);margin:0}
+.trust-box strong{color:var(--on-dark);font-weight:600}
+
+/* ─── STATS ─── */
+.stats-panel{max-width:1200px;margin:0 auto;padding:28px 24px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.stat-cell{background:var(--bg);padding:30px 24px}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:34px;color:var(--ink);letter-spacing:-.02em}
+.stat-num.sm{font-size:26px;line-height:1.05}
+.stat-label{font-size:13px;color:var(--muted);margin-top:4px}
+
+/* ─── SECTIONS COMMON ─── */
+.section-label{font-family:'Space Grotesk',sans-serif;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:18px}
+.section-h2{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;color:var(--ink);margin:0}
+.section-lead{font-size:16px;line-height:1.65;color:var(--muted);margin:0}
+.pad{padding:clamp(72px,9vw,116px) 24px}
+.container{max-width:1200px;margin:0 auto}
+.container-md{max-width:1100px;margin:0 auto}
+
+/* ─── PROGRAMA ─── */
+.programa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:54px;align-items:start}
+.programa-body{font-size:17px;line-height:1.72;color:var(--ink-soft)}
+.programa-body p{margin:0 0 18px}
+.programa-body p:last-child{margin:0}
+.programa-body strong{color:var(--ink);font-weight:600}
+.programa-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:54px}
+.card{border:1px solid var(--line);border-radius:16px;padding:26px;background:var(--bg)}
+.card-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;color:var(--ink);margin:16px 0 8px}
+.card-body{font-size:14.5px;line-height:1.6;color:var(--muted);margin:0}
+
+/* ─── COORDENADOR ─── */
+.coord-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:54px;align-items:stretch}
+.coord-photo-col{display:flex;flex-direction:column}
+.coord-photo{flex:1;min-height:420px;border-radius:20px;overflow:hidden;border:1px solid var(--on-dark-line);background-color:var(--bg-dark-2);background-image:url('images/foto01.webp');background-size:cover;background-position:50% 18%;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.coord-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.coord-chip{font-size:11.5px;border:1px solid var(--on-dark-line);border-radius:999px;padding:6px 12px;color:var(--on-dark-muted)}
+.coord-quote{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:clamp(24px,3vw,33px);line-height:1.32;color:var(--on-dark);margin:0 0 26px}
+.coord-bio{font-size:15.5px;line-height:1.7;color:var(--on-dark-muted);margin:0 0 22px}
+.coord-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:var(--on-dark)}
+.coord-role{font-size:13.5px;color:var(--accent-2)}
+
+/* ─── DIFERENCIAIS ─── */
+.dif-card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:28px}
+.dif-num{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--accent);font-size:15px;margin-bottom:14px}
+.dif-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18.5px;color:var(--ink);margin:0 0 8px}
+.dif-body{font-size:14.5px;line-height:1.62;color:var(--muted);margin:0}
+
+/* ─── ESTRUTURA / ACCORDION ─── */
+.estrutura-axis{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:42px}
+.axis-card{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--bg-alt)}
+.axis-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;color:var(--ink)}
+.axis-unit{font-size:13px;color:var(--muted)}
+.axis-title{font-family:'Space Grotesk',sans-serif;font-weight:600;color:var(--ink);margin-top:8px}
+.axis-desc{font-size:13.5px;color:var(--muted);line-height:1.55;margin:6px 0 0}
+.accordion{border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-item:last-child{border-bottom:none}
+.acc-btn{width:100%;display:flex;align-items:center;gap:18px;background:none;border:none;text-align:left;padding:20px 22px;font-family:'Hanken Grotesk',sans-serif;color:inherit}
+.acc-btn:hover{background:var(--bg-alt)}
+.acc-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:var(--accent);min-width:30px}
+.acc-name{flex:1;font-weight:600;font-size:16.5px;color:var(--ink)}
+.acc-cred{font-size:12.5px;color:var(--muted);white-space:nowrap}
+.acc-sign{font-family:'Space Grotesk',sans-serif;font-size:22px;color:var(--accent);width:22px;text-align:center;line-height:1;flex-shrink:0}
+.acc-content{display:none;padding:2px 22px 24px 70px}
+.acc-content.open{display:block}
+.acc-cred-label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:10px}
+.acc-ementa{font-size:15px;line-height:1.7;color:var(--ink-soft);margin:0}
+
+/* ─── METODOLOGIA ─── */
+.meto-card{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:30px}
+.meto-pillar{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.1em}
+.meto-h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:22px;color:var(--ink);margin:10px 0 12px}
+.meto-body{font-size:14.5px;line-height:1.62;color:var(--muted);margin:0}
+
+/* ─── DOCENTES ─── */
+.docentes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.docente-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg)}
+.docente-photo{aspect-ratio:1/1;background-color:#0a0807;background-size:cover}
+.docente-info{padding:18px}
+.docente-name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:var(--ink)}
+.docente-role{font-size:12.5px;color:var(--accent-ink);margin:3px 0 8px}
+.docente-desc{font-size:12.5px;color:var(--muted);line-height:1.5}
+
+/* ─── DEPOIMENTOS ─── */
+.depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.depo-card{background:var(--bg-dark-2);border:1px solid var(--on-dark-line);border-radius:18px;padding:28px}
+.depo-text{font-size:15px;line-height:1.65;color:var(--on-dark);margin:0 0 20px}
+.depo-name{font-family:'Space Grotesk',sans-serif;font-weight:600;color:var(--on-dark)}
+.depo-title{font-size:12.5px;color:var(--on-dark-muted)}
+.depo-cta-card{border-radius:18px;padding:28px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,var(--accent),var(--accent-ink))}
+.depo-cta-turma{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;color:#fff;line-height:1}
+.depo-cta-lead{font-size:15px;line-height:1.6;color:rgba(255,255,255,.92);margin:14px 0 20px}
+.depo-cta-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:14px;padding:12px 20px;border-radius:999px;align-self:flex-start}
+
+/* ─── ADMISSÃO ─── */
+.admissao-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px}
+.admissao-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.admissao-item{display:flex;gap:12px;font-size:15.5px;line-height:1.5;color:var(--ink-soft)}
+.admissao-item svg{flex-shrink:0;margin-top:1px}
+.admissao-item span strong{color:var(--ink)}
+.ingresso-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:20px;padding:32px}
+.ingresso-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:20px;color:var(--ink);margin:0 0 22px}
+.steps{display:flex;flex-direction:column;gap:20px}
+.step{display:flex;gap:16px}
+.step-num{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px}
+.step-title{font-weight:600;color:var(--ink)}
+.step-desc{font-size:14px;color:var(--muted)}
+.ingresso-cta{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:26px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:15px;border-radius:12px}
+.ingresso-cta:hover{filter:brightness(1.08)}
+
+/* ─── FAQ ─── */
+.faq-btn{width:100%;display:flex;align-items:center;gap:16px;background:none;border:none;text-align:left;padding:22px 24px;font-family:'Hanken Grotesk',sans-serif;color:inherit}
+.faq-btn:hover{background:var(--bg-alt)}
+.faq-q{flex:1;font-weight:600;font-size:16.5px;color:var(--ink)}
+.faq-content{display:none;padding:0 24px 24px}
+.faq-content.open{display:block}
+.faq-a{font-size:15px;line-height:1.7;color:var(--ink-soft);margin:0}
+
+/* ─── CTA FINAL ─── */
+.cta-section{background:var(--bg-dark);color:var(--on-dark);padding:clamp(80px,10vw,130px) 24px;position:relative;overflow:hidden;text-align:center}
+.cta-glow{position:absolute;inset:0;background:radial-gradient(900px 500px at 50% 0%,var(--glow),transparent 60%);pointer-events:none}
+.cta-inner{position:relative;max-width:760px;margin:0 auto}
+.cta-label{font-family:'Space Grotesk',sans-serif;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-2);margin-bottom:20px}
+.cta-h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(34px,5vw,60px);line-height:1.05;letter-spacing:-.025em;color:var(--on-dark);margin:0 0 22px}
+.cta-lead{font-size:17px;line-height:1.6;color:var(--on-dark-muted);margin:0 0 36px}
+.btn-cta-final{display:inline-flex;align-items:center;gap:12px;background:#fff;color:#0b0f1c;text-decoration:none;font-weight:700;font-size:16px;padding:18px 36px;border-radius:999px;box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.btn-cta-final:hover{transform:translateY(-2px)}
+
+/* ─── FOOTER ─── */
+footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 40px;border-top:1px solid var(--on-dark-line)}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+.footer-tagline{font-size:15px;line-height:1.6;margin:0;max-width:300px;color:var(--on-dark-muted)}
+.footer-section-label{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark);margin-bottom:18px}
+.footer-email{display:inline-flex;align-items:center;gap:12px;color:var(--accent-2);text-decoration:none;font-size:16px}
+.social-links{display:flex;gap:14px;margin-top:0}
+.social-btn{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;border:1px solid var(--on-dark-line);color:var(--on-dark-muted);text-decoration:none}
+.social-btn:hover{border-color:var(--accent-2);color:var(--accent-2)}
+.footer-link{display:inline-flex;align-items:center;gap:12px;color:var(--on-dark-muted);text-decoration:none;font-size:16px}
+.footer-link:hover{color:var(--accent-2)}
+.footer-links-col{display:flex;flex-direction:column;gap:16px}
+.footer-bottom{max-width:1200px;margin:36px auto 0;padding-top:24px;border-top:1px solid var(--on-dark-line);font-size:12.5px;color:var(--on-dark-muted);text-align:center}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){.nav-links{display:none}}
+@media(max-width:720px){.hero-h1{font-size:clamp(44px,13vw,68px)!important}}
+@media(max-width:760px){.grid-3{grid-template-columns:1fr!important}}
+@media(max-width:820px){.footer-grid{grid-template-columns:1fr!important;gap:34px!important}}
+@media(max-width:640px){.hero{padding:190px 24px 60px}.trust-row{flex-direction:column}}
+
+/* WhatsApp icon fill */
+.wa-icon{fill:currentColor}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header id="site-header">
+  <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" id="ann-bar">
+    <span id="ann-dot"></span>
+    Inscrições abertas para a próxima turma internacional
+    <span style="opacity:.85;font-weight:500">— fale no WhatsApp →</span>
+  </a>
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="https://www.infinityneuro.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit">
+        <img src="images/logo-mestrado.png" alt="Infinity Neurobusiness School — Master of Science in Neuroscience for Business" style="height:121px;width:auto">
+      </a>
+      <div class="nav-links">
+        <a href="#programa">O Programa</a>
+        <a href="#estrutura">Disciplinas</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#docentes">Docentes</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" class="nav-cta">
+        Tire suas dúvidas
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-dot-grid"></div>
+  <div class="hero-glow-blob"></div>
+  <div class="hero-photo"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Mestrado Internacional · Master of Science
+      </div>
+      <h1 class="hero-h1">
+        <span class="accent">Neurociência</span><br>para quem<br>decide.
+      </h1>
+      <p class="hero-lead">
+        O <strong>Master of Science in Neuroscience for Business</strong> é o mestrado que aproxima ciência e mercado — formando profissionais que transformam evidência científica em <strong>decisão, liderança e resultado</strong>.
+      </p>
+      <div class="hero-coord">
+        <div class="hero-coord-name">Prof. Dr. Tiago Cavalcanti Tabajara, PhD</div>
+        <div class="hero-coord-title">Criador e Coordenador do Programa · Pioneiro em Neurobusiness no Brasil</div>
+      </div>
+      <div class="hero-chips">
+        <span class="chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          Título MSc · Stricto Sensu
+        </span>
+        <span class="chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="m8 21h8"/></svg>
+          100% Online · Ao Vivo ou Gravado
+        </span>
+        <span class="chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          72 créditos · 24 meses
+        </span>
+        <span class="chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7Z"/></svg>
+          Dupla Diplomação
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" class="wa-icon"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>
+          Quero me inscrever
+        </a>
+        <a href="#programa" class="btn-ghost">
+          Conheça o programa
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust strip -->
+  <div class="trust-strip">
+    <span class="trust-label">Realização &amp; Certificação</span>
+    <div class="trust-row">
+      <div class="trust-logos">
+        <span class="trust-logo-item">
+          <a href="https://www.infinityneuro.com" target="_blank" rel="noopener" style="display:inline-flex">
+            <img src="images/infinity-seal.png" alt="Infinity Neurobusiness School" style="height:58px;width:auto;filter:brightness(0) invert(1)">
+          </a>
+          <span>Infinity<br>Neurobusiness School</span>
+        </span>
+        <span class="trust-logo-item">
+          <a href="https://unilogos.edu.eu" target="_blank" rel="noopener" style="display:inline-flex">
+            <img src="images/logos-university.png" alt="Logos University International" style="height:58px;width:auto">
+          </a>
+          <span>Logos University<br>International · UniLogos</span>
+        </span>
+      </div>
+      <div class="trust-box">
+        <p>Programa <strong>realizado pela Infinity Neurobusiness School</strong> e <strong>certificado pela Logos University International (UniLogos)</strong>, instituição internacional de ensino superior sediada entre EUA e França. A parceria une a expertise da Infinity em neurociência aplicada aos negócios à acreditação internacional da UniLogos, garantindo um título de mestrado (MSc) com reconhecimento internacional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ STATS ═══════════ -->
+<section style="background:var(--bg);padding:0">
+  <div class="stats-panel">
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <div class="stat-num">+18 mil</div>
+        <div class="stat-label">alunos formados pela Infinity</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">~15 mil</div>
+        <div class="stat-label">horas de aula ministradas</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num sm">Maior Referência<br>no Brasil</div>
+        <div class="stat-label">em Neurobusiness</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ O PROGRAMA ═══════════ -->
+<section id="programa" style="background:var(--bg)" class="pad">
+  <div class="container">
+    <div class="programa-grid">
+      <div>
+        <div class="section-label">O Programa</div>
+        <h2 class="section-h2">A ponte entre a ciência e o mundo dos negócios.</h2>
+      </div>
+      <div class="programa-body">
+        <p>Existe uma distância significativa entre a produção científica acadêmica e a realidade do mercado. Enquanto a academia desenvolve conhecimento de alta relevância, grande parte dele permanece restrita ao ambiente científico — e os negócios seguem orientados por intuição e experiência, nem sempre sustentadas por evidência.</p>
+        <p>É dessa lacuna que nasce este mestrado: aproximar ciência e mercado, tornando a pesquisa <strong>acessível, compreensível e aplicável</strong>. Mais do que ensinar neurociência, o programa amplia a capacidade analítica, crítica e estratégica para ler comportamento humano, decisão, consumo, liderança e performance sob as lentes da ciência.</p>
+      </div>
+    </div>
+    <div class="programa-cards">
+      <div class="card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6"><path d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2Z"/><path d="M9 22h6"/></svg>
+        <h3 class="card-title">Decisão baseada em evidência</h3>
+        <p class="card-body">Compreenda os mecanismos cognitivos, emocionais e comportamentais que influenciam escolhas e resultados.</p>
+      </div>
+      <div class="card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 14 3-4 3 3 4-6"/></svg>
+        <h3 class="card-title">Pesquisa de impacto real</h3>
+        <p class="card-body">Investigue problemas concretos do seu contexto profissional e produza soluções aplicáveis.</p>
+      </div>
+      <div class="card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+        <h3 class="card-title">Para profissionais de mercado</h3>
+        <p class="card-body">Desenhado para quem tem pouco tempo, mas quer produzir resultados práticos por meio da pesquisa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ COORDENADOR ═══════════ -->
+<section style="background:var(--bg-dark);color:var(--on-dark);position:relative;overflow:hidden" class="pad">
+  <div style="position:absolute;top:-20%;left:-10%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 62%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1100px;margin:0 auto">
+    <div class="coord-grid">
+      <div class="coord-photo-col">
+        <div class="coord-photo"></div>
+        <div class="coord-chips">
+          <span class="coord-chip">TEDx Speaker</span>
+          <span class="coord-chip">Escritor Best Seller</span>
+          <span class="coord-chip">22 anos de mercado</span>
+          <span class="coord-chip">96 prêmios</span>
+          <span class="coord-chip">538 mentorias</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin-bottom:22px">O Coordenador</div>
+        <p class="coord-quote">"Nenhuma ferramenta é tão importante quanto os seus pensamentos. São eles que possuem o maior poder de transformação que você possa experimentar."</p>
+        <p class="coord-bio">Pioneiro e um dos principais especialistas do Brasil em neurociência aplicada aos negócios. PhD e Mestre em Neuromarketing pelos EUA, autor do 1º livro sobre Mindset do país e criador do primeiro MBA em Neurobusiness do Brasil. CEO da Infinity Neurobusiness School, já capacitou mais de 18 mil alunos.</p>
+        <div class="coord-name">Dr. Tiago Cavalcanti Tabajara, PhD</div>
+        <div class="coord-role">Criador, Professor e Coordenador do Programa de Mestrado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DIFERENCIAIS ═══════════ -->
+<section id="diferenciais" style="background:var(--bg-alt)" class="pad">
+  <div class="container">
+    <div style="max-width:640px;margin-bottom:48px">
+      <div class="section-label">Por que este mestrado</div>
+      <h2 class="section-h2">Um mestrado sem enrolação, prático, científico e aplicável.</h2>
+    </div>
+    <div class="grid-3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px">
+      <div class="dif-card"><div class="dif-num">01</div><h3 class="dif-title">Ciência aplicada ao mercado</h3><p class="dif-body">Estudos científicos unidos às práticas reais de gestão, vendas, marketing e liderança.</p></div>
+      <div class="dif-card"><div class="dif-num">02</div><h3 class="dif-title">Pesquisa por problemas reais</h3><p class="dif-body">Sem linha de pesquisa fechada: o ponto de partida é o desafio do seu próprio contexto profissional.</p></div>
+      <div class="dif-card"><div class="dif-num">03</div><h3 class="dif-title">Orientação dedicada</h3><p class="dif-body">Encontros regulares com orientador qualificado e comitê de acompanhamento em todas as etapas.</p></div>
+      <div class="dif-card"><div class="dif-num">04</div><h3 class="dif-title">Produção científica de verdade</h3><p class="dif-body">Dissertação original, artigo submetido a periódico revisado por pares e apresentação em evento.</p></div>
+      <div class="dif-card"><div class="dif-num">05</div><h3 class="dif-title">Docentes acadêmicos e de mercado</h3><p class="dif-body">Professores que unem produção científica ativa à atuação prática como mentores acessíveis.</p></div>
+      <div class="dif-card"><div class="dif-num">06</div><h3 class="dif-title">Título internacional (MSc)</h3><p class="dif-body">Pós-graduação stricto sensu certificada pela UniLogos, com possibilidade de dupla diplomação.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ESTRUTURA CURRICULAR ═══════════ -->
+<section id="estrutura" style="background:var(--bg)" class="pad">
+  <div class="container-md">
+    <div style="max-width:640px;margin-bottom:40px">
+      <div class="section-label">Estrutura Curricular</div>
+      <h2 class="section-h2" style="margin-bottom:14px">13 disciplinas. 1.080 horas. Uma jornada científica completa.</h2>
+      <p class="section-lead">72 créditos distribuídos em dois eixos: fundamentação teórica e aplicada, e o desenvolvimento da sua dissertação.</p>
+    </div>
+    <div class="estrutura-axis">
+      <div class="axis-card">
+        <div><span class="axis-num">60</span> <span class="axis-unit">créditos · 900h</span></div>
+        <div class="axis-title">Eixo Curricular · 18 meses</div>
+        <p class="axis-desc">Disciplinas obrigatórias de fundamentação teórica, metodológica e aplicada.</p>
+      </div>
+      <div class="axis-card">
+        <div><span class="axis-num">12</span> <span class="axis-unit">créditos · 180h</span></div>
+        <div class="axis-title">Eixo de Pesquisa · 6 meses</div>
+        <p class="axis-desc">Desenvolvimento, escrita e defesa da dissertação de mestrado.</p>
+      </div>
+    </div>
+
+    <div class="accordion" id="disc-accordion">
+      <!-- Item 01 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">01</span>
+          <span class="acc-name">Mentalidade e Cultura</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">6 créditos · 90h · Ementa</div>
+          <p class="acc-ementa">Estudo da formação da mentalidade a partir da influência do ambiente e do direcionamento genético, e seu impacto na cognição, inteligência e tomada de decisão. Relação entre mindset, cultura e comportamento humano em contextos organizacionais e mercadológicos. Memética como agente de imitação cultural e formação de valores, crenças e cultura, impactando liderança, comunicação, engajamento, inovação e performance.</p>
+        </div>
+      </div>
+      <!-- Item 02 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">02</span>
+          <span class="acc-name">Economia Comportamental</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">6 créditos · 90h · Ementa</div>
+          <p class="acc-ementa">Fundamentos comportamentais que influenciam decisões econômicas em contextos individuais, organizacionais e mercadológicos. Fatores cognitivos, emocionais, sociais e contextuais que afetam escolhas de risco, recompensa, valor percebido, consumo e racionalidade limitada. Interfaces entre economia comportamental, neuroeconomia e tomada de decisão, com ênfase em heurísticas, vieses e construção de valor.</p>
+        </div>
+      </div>
+      <!-- Item 03 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">03</span>
+          <span class="acc-name">Princípios de Neurociência</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">6 créditos · 90h · Ementa</div>
+          <p class="acc-ementa">Fundamentos da neurociência voltados à compreensão da estrutura e do funcionamento do sistema nervoso, com ênfase nos processos biológicos que sustentam percepção, cognição, emoção, motivação, aprendizagem, memória e comportamento. Organização cerebral, comunicação neuronal, plasticidade neural e integração entre cérebro, corpo e ambiente.</p>
+        </div>
+      </div>
+      <!-- Item 04 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">04</span>
+          <span class="acc-name">Neuromarketing Aplicado ao Comportamento do Consumidor</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">6 créditos · 90h · Ementa</div>
+          <p class="acc-ementa">Aplicação da neurociência à compreensão do comportamento do consumidor em contextos de consumo, comunicação, branding e decisão de compra. Processos cognitivos, emocionais e motivacionais que influenciam atenção, memória, preferência e escolha. Contribuição do neuromarketing para investigar processos implícitos e não conscientes, com aplicações em pesquisa de mercado, produtos, marca e publicidade.</p>
+        </div>
+      </div>
+      <!-- Item 05 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">05</span>
+          <span class="acc-name">Neurociência Aplicada a Vendas e Negociação</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">6 créditos · 90h · Ementa</div>
+          <p class="acc-ementa">Mecanismos cognitivos, emocionais e motivacionais que influenciam percepção de valor, confiança, persuasão, objeções, cooperação e fechamento. Papel de atenção, memória, emoção, vieses e aversão à perda nas interações comerciais. Aplicação prática à construção de estratégias de comunicação, argumentação, condução de reuniões e gestão de conflitos em negociações de alta complexidade.</p>
+        </div>
+      </div>
+      <!-- Item 06 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">06</span>
+          <span class="acc-name">Neuromarketing Digital</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">5 créditos · 75h · Ementa</div>
+          <p class="acc-ementa">Aplicação da neurociência ao ambiente digital e ao comportamento do consumidor em ecossistemas online. Atenção, sobrecarga informacional, gatilhos de engajamento, experiência do usuário, jornadas digitais de compra, influência algorítmica e conversão. Estratégias de comunicação, performance, branding, copywriting e design persuasivo, com olhar crítico sobre dados e ética.</p>
+        </div>
+      </div>
+      <!-- Item 07 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">07</span>
+          <span class="acc-name">Ética e Pesquisa com Seres Humanos</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">3 créditos · 45h · Ementa</div>
+          <p class="acc-ementa">Fundamentos éticos da pesquisa científica com seres humanos, com ênfase em investigações aplicadas à neurociência e ao comportamento. Dignidade, autonomia, beneficência, consentimento livre e esclarecido, confidencialidade e manejo de dados sensíveis. Diretrizes regulatórias, comitês de ética, integridade científica e responsabilidade do pesquisador.</p>
+        </div>
+      </div>
+      <!-- Item 08 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">08</span>
+          <span class="acc-name">Tribos Culturais</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">6 créditos · 90h · Ementa</div>
+          <p class="acc-ementa">Dinâmicas tribais, simbólicas e culturais que estruturam o comportamento humano coletivo e influenciam identidades, pertencimento, consumo, poder e crescimento econômico. Como grupos se organizam em torno de crenças, valores e narrativas, afetando reputação, lideranças e difusão de comportamentos no mercado, com contribuições da antropologia, sociologia, psicologia social e neurociência.</p>
+        </div>
+      </div>
+      <!-- Item 09 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">09</span>
+          <span class="acc-name">Linguagem Corporal</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">3 créditos · 45h · Ementa</div>
+          <p class="acc-ementa">A linguagem corporal como dimensão não verbal da comunicação humana, com ênfase nos sinais que influenciam percepção, confiança, persuasão e liderança. Postura, gestualidade, expressões faciais, proxêmica e sincronização interpessoal. Limites interpretativos e importância do contexto, com aplicações em vendas, negociação, entrevistas e apresentações.</p>
+        </div>
+      </div>
+      <!-- Item 10 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">10</span>
+          <span class="acc-name">Neuroliderança e Performance Humana</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">3 créditos · 45h · Ementa</div>
+          <p class="acc-ementa">Aplicação da neurociência à liderança e à performance humana, com ênfase nos processos que influenciam decisão, autorregulação, comunicação, engajamento e desempenho. Mecanismos envolvidos na gestão de pessoas, formação de confiança, regulação do estresse e construção de ambientes psicologicamente seguros para sustentar alta performance em cenários de pressão e mudança.</p>
+        </div>
+      </div>
+      <!-- Item 11 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">11</span>
+          <span class="acc-name">Ferramentas de Pesquisa para Neuromarketing</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">3 créditos · 45h · Ementa</div>
+          <p class="acc-ementa">Instrumentos, métodos e técnicas de pesquisa aplicados ao neuromarketing. Limites dos métodos baseados em autorrelato e contribuições de abordagens neurocientíficas e biométricas — eye tracking, EEG, resposta galvânica da pele, facial coding e testes implícitos. Desenho de pesquisa, hipóteses, coleta e interpretação de dados, validade metodológica e ética.</p>
+        </div>
+      </div>
+      <!-- Item 12 -->
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span class="acc-num">12</span>
+          <span class="acc-name">Metodologia da Pesquisa Científica</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">4 créditos · 60h · Ementa</div>
+          <p class="acc-ementa">Fundamentos epistemológicos da pesquisa científica. Métodos quantitativos e qualitativos aplicados à neurociência. Elaboração de projetos de pesquisa, revisão de literatura, análise de dados e redação científica. Princípios éticos em pesquisa com seres humanos e divulgação científica de resultados.</p>
+        </div>
+      </div>
+      <!-- Item 13 -->
+      <div class="acc-item" style="border-bottom:none">
+        <button class="acc-btn">
+          <span class="acc-num">13</span>
+          <span class="acc-name">Pesquisa, Escrita e Defesa</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="acc-content">
+          <div class="acc-cred-label">12 créditos · 180h · Ementa</div>
+          <p class="acc-ementa">Desenvolvimento de projeto de pesquisa original — sem linha de pesquisa definida previamente — buscando resolver problemas reais do mundo corporativo. Execução sob orientação de docente qualificado, elaboração de dissertação conforme normas acadêmicas e realização de defesa pública perante banca examinadora.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ METODOLOGIA ═══════════ -->
+<section id="metodologia" style="background:var(--bg-alt)" class="pad">
+  <div class="container-md">
+    <div style="max-width:680px;margin-bottom:48px">
+      <div class="section-label">Metodologia de Ensino</div>
+      <h2 class="section-h2" style="margin-bottom:14px">Curadoria de Conhecimento: estudar, refletir, produzir.</h2>
+      <p class="section-lead">Modelo pedagógico ativo inspirado em Piaget, Paulo Freire, David Kolb e José Pacheco — um ciclo contínuo que forma pesquisadores autônomos e críticos.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+      <div class="meto-card">
+        <div class="meto-pillar">PILAR 01</div>
+        <h3 class="meto-h3">Estudo</h3>
+        <p class="meto-body">Leitura de materiais selecionados e atualizados — artigos, livros e pesquisas — seguida de exploração aprofundada em fontes científicas.</p>
+      </div>
+      <div class="meto-card">
+        <div class="meto-pillar">PILAR 02</div>
+        <h3 class="meto-h3">Reflexão</h3>
+        <p class="meto-body">Reflexão crítica, debate com colegas e tutores em encontros dialógicos e formulação de hipóteses e argumentos próprios.</p>
+      </div>
+      <div class="meto-card">
+        <div class="meto-pillar">PILAR 03</div>
+        <h3 class="meto-h3">Produção</h3>
+        <p class="meto-body">Redação de artigos científicos seguindo normas acadêmicas, revisão com feedback e submissão para publicação em periódicos indexados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CORPO DOCENTE ═══════════ -->
+<section id="docentes" style="background:var(--bg)" class="pad">
+  <div class="container">
+    <div style="max-width:680px;margin-bottom:48px">
+      <div class="section-label">Corpo Docente</div>
+      <h2 class="section-h2" style="margin-bottom:14px">Professores de alto nível — mais do que professores, mentores.</h2>
+      <p class="section-lead">Além do Coordenador do Programa, o time de professores conta com Doutores e Mestres com produção científica ativa e experiência de mercado, que orientam de perto a pesquisa de cada estudante.</p>
+    </div>
+    <div class="docentes-grid">
+      <div class="docente-card">
+        <div class="docente-photo" style="background-image:url('images/prof-fernando-real.webp');background-position:50% 24%"></div>
+        <div class="docente-info">
+          <div class="docente-name">Dr. Fernando Pianaro, PD</div>
+          <div class="docente-role">Palestrante, Professor e Consultor</div>
+          <div class="docente-desc">Mestre, Doutor e Pós-Doutor em Administração</div>
+        </div>
+      </div>
+      <div class="docente-card">
+        <div class="docente-photo" style="background-image:url('images/prof-carla-real.webp');background-position:50% 22%"></div>
+        <div class="docente-info">
+          <div class="docente-name">Dra. Carla de Oliveira, PD</div>
+          <div class="docente-role">Professora e Pesquisadora</div>
+          <div class="docente-desc">Mestre, Doutora e Pós-Doutora em Medicina</div>
+        </div>
+      </div>
+      <div class="docente-card">
+        <div class="docente-photo" style="background-image:url('images/prof-marcio-real.webp');background-position:50% 14%"></div>
+        <div class="docente-info">
+          <div class="docente-name">Márcio Harff, MSc</div>
+          <div class="docente-role">Professor, Palestrante e Consultor</div>
+          <div class="docente-desc">Mestre em Neuroscience for Business</div>
+        </div>
+      </div>
+      <div class="docente-card">
+        <div class="docente-photo" style="background-image:url('images/foto-vanessa-nova.webp');background-position:50% 16%"></div>
+        <div class="docente-info">
+          <div class="docente-name">Vanessa Tabajara, MSc</div>
+          <div class="docente-role">Psicóloga, Professora e Consultora</div>
+          <div class="docente-desc">Mestra em Neuroscience for Business</div>
+        </div>
+      </div>
+      <div class="docente-card">
+        <div class="docente-photo" style="background-image:url('images/prof-alvaro-real.webp');background-size:108%;background-position:50% 22%"></div>
+        <div class="docente-info">
+          <div class="docente-name">Álvaro Flores, Me</div>
+          <div class="docente-role">Engenheiro, Professor, Palestrante e Consultor</div>
+          <div class="docente-desc">Mestre e Especialista em Neuroeconomia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DEPOIMENTOS ═══════════ -->
+<section id="depoimentos" style="background:var(--bg-dark);color:var(--on-dark);position:relative;overflow:hidden" class="pad">
+  <div style="position:absolute;bottom:-15%;right:-8%;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 62%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto">
+    <div style="max-width:680px;margin-bottom:48px">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin-bottom:16px">Depoimentos</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;color:var(--on-dark);margin:0">Vidas e carreiras transformadas.</h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <p class="depo-text">"Me inscrevi porque é totalmente diferenciado do que as universidades tradicionais apresentam. O foco é uma pesquisa séria, que faça diferença para você como profissional e como solução para a sociedade."</p>
+        <div class="depo-name">Janete Lenhard</div>
+        <div class="depo-title">Business Partner na FIERGS</div>
+      </div>
+      <div class="depo-card">
+        <p class="depo-text">"Foi o melhor investimento que fiz, a melhor decisão dos últimos anos. Alavancou muito a minha carreira, com reconhecimento e retorno financeiro. Um nível de conhecimento totalmente diferenciado para usar no dia a dia."</p>
+        <div class="depo-name">Luciano Pereira</div>
+        <div class="depo-title">Professor, Palestrante e Empresário</div>
+      </div>
+      <div class="depo-card">
+        <p class="depo-text">"Estudar neurociência foi um divisor de águas. Hoje entendo como as coisas funcionam na vida e nos negócios, principalmente quando o assunto é trabalhar com pessoas. Indico este mestrado, ele realmente é transformador."</p>
+        <div class="depo-name">Karoline Silveira</div>
+        <div class="depo-title">Coordenadora de Projetos · FIERGS</div>
+      </div>
+      <div class="depo-card">
+        <p class="depo-text">"Um mestrado sem enrolação, prático, com professores muito diferenciados e atuantes no mercado. Não traz apenas teorias, mas conceitos aplicáveis. Superou todas as minhas expectativas."</p>
+        <div class="depo-name">Sabrina Ewerling</div>
+        <div class="depo-title">Consultora de Vendas · Apsen</div>
+      </div>
+      <div class="depo-cta-card">
+        <div class="depo-cta-turma">3ª turma</div>
+        <p class="depo-cta-lead">Faça parte da 3ª turma do programa e construa um legado na sua carreira e na sociedade.</p>
+        <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" class="depo-cta-btn">Quero participar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ADMISSÃO ═══════════ -->
+<section id="admissao" style="background:var(--bg)" class="pad">
+  <div class="container-md">
+    <div class="admissao-grid">
+      <div>
+        <div class="section-label">Admissão</div>
+        <h2 class="section-h2" style="font-size:clamp(28px,3.4vw,42px);margin-bottom:24px">Quem pode se candidatar</h2>
+        <ul class="admissao-list">
+          <li class="admissao-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            <span>Diploma de graduação reconhecido em <strong>qualquer área</strong> do conhecimento</span>
+          </li>
+          <li class="admissao-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            <span>Histórico escolar, currículo atualizado e carta de motivação</span>
+          </li>
+          <li class="admissao-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            <span>Experiência profissional de 2 anos é recomendada (não eliminatória)</span>
+          </li>
+          <li class="admissao-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            <span>Proficiência em inglês apenas em casos específicos para não nativos</span>
+          </li>
+        </ul>
+      </div>
+      <div class="ingresso-card">
+        <h3 class="ingresso-title">Como ingressar</h3>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div><div class="step-title">Contato e inscrição</div><div class="step-desc">Fale com a equipe pelo WhatsApp e receba o formulário.</div></div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div><div class="step-title">Envio de documentos</div><div class="step-desc">Diploma, histórico, currículo e carta de motivação.</div></div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div><div class="step-title">Entrevista online</div><div class="step-desc">Conversa de seleção para alinhar objetivos e perfil.</div></div>
+          </div>
+          <div class="step">
+            <span class="step-num">4</span>
+            <div><div class="step-title">Matrícula e início</div><div class="step-desc">Confirmação da vaga e começo da sua jornada.</div></div>
+          </div>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" class="ingresso-cta">Começar minha inscrição →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section id="faq" style="background:var(--bg)" class="pad">
+  <div style="max-width:860px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-label" style="text-align:center">Perguntas Frequentes</div>
+      <h2 class="section-h2" style="font-size:clamp(28px,3.4vw,42px);text-align:center">Ainda tem dúvidas?</h2>
+    </div>
+    <div class="accordion" id="faq-accordion">
+      <div class="acc-item faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">O mestrado tem reconhecimento internacional?</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-a">Sim. Esse programa de Mestrado lhe outorga título de Master of Science in Neuroscience for Business (MSc), uma pós-graduação Americana equivalente aos programas stricto sensu no Brasil, porém certificada pela Logos University International (UniLogos), conforme critérios internacionais de acreditação vigentes. Você recebe também o selo de qualidade em Neurociência da Infinity.</p>
+        </div>
+      </div>
+      <div class="acc-item faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">Qual a duração e a carga horária?</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-a">São 24 meses no total: 72 créditos / 1.080 horas, sendo 60 créditos curriculares (18 meses) e 12 créditos de pesquisa (6 meses) dedicados à dissertação.</p>
+        </div>
+      </div>
+      <div class="acc-item faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">As aulas são presenciais ou online?</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-a">O programa é 100% online, com encontros ao vivo e com aulas gravadas, em um Ambiente Virtual de Aprendizagem completo, acessível de qualquer lugar.</p>
+        </div>
+      </div>
+      <div class="acc-item faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">Preciso de experiência ou de inglês?</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-a">A graduação pode ser em qualquer área. Experiência profissional de 2 anos é recomendada, mas não eliminatória. A proficiência em inglês é exigida apenas em casos específicos para candidatos não nativos.</p>
+        </div>
+      </div>
+      <div class="acc-item faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">Como funciona a pesquisa e a Tese?</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-a">Você desenvolve um projeto original a partir de um problema real do seu próprio contexto profissional, sem linha de pesquisa fechada. Conta com orientação dedicada, submete um artigo a periódico revisado por pares, apresenta em evento científico e defende publicamente a dissertação.</p>
+        </div>
+      </div>
+      <div class="acc-item faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">Sou ex-aluno de MBA da Infinity. Há aproveitamento?</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-a">Sim. Créditos de programas anteriores da Infinity podem ser aproveitados mediante análise de equivalência acadêmica, permitindo concluir o mestrado em menos tempo.</p>
+        </div>
+      </div>
+      <div class="acc-item faq-item" style="border-bottom:none">
+        <button class="faq-btn">
+          <span class="faq-q">Quanto custa e como me inscrevo?</span>
+          <span class="acc-sign">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="faq-a">Fale com a nossa equipe pelo WhatsApp: enviamos valores, condições, o calendário da próxima turma e o formulário de matrícula.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA FINAL ═══════════ -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <div class="cta-label">Sua jornada começa agora</div>
+    <h2 class="cta-h2">Pronto para investigar as questões mais importantes do mundo dos negócios?</h2>
+    <p class="cta-lead">Fale com nossa equipe, conheça valores e condições e dê o primeiro passo no Master of Science in Neuroscience for Business.</p>
+    <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" class="btn-cta-final">
+      <svg width="20" height="20" viewBox="0 0 24 24" class="wa-icon"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="https://www.infinityneuro.com" target="_blank" rel="noopener" style="display:inline-flex;margin-bottom:22px">
+        <img src="images/infinity-seal.png" alt="Infinity Neurobusiness School" style="width:128px;height:128px;filter:brightness(0) invert(1)">
+      </a>
+      <p class="footer-tagline">Transformando pessoas e empresas por meio da neurociência aplicada aos negócios desde 2012.</p>
+    </div>
+    <div>
+      <div class="footer-section-label">Contato</div>
+      <a href="mailto:contato@infinityneuro.com" class="footer-email">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        contato@infinityneuro.com
+      </a>
+      <div class="footer-section-label" style="margin-top:32px">Redes Sociais</div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/infinity_neurobusiness" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/infinityneurobusiness" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h2.5V6H14c-2 0-3.5 1.5-3.5 3.5V11H8.5v3h2v6h3v-6h2.3l.4-3H13.5V9.8c0-.5.3-.8.8-.8Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/infinityneurobusiness" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5A1.8 1.8 0 1 0 6.5 5a1.8 1.8 0 0 0 0 3.5ZM5 10h3v9H5v-9Zm5 0h2.9v1.3c.4-.7 1.4-1.5 2.9-1.5 3 0 3.6 1.9 3.6 4.4V19h-3v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2V19h-3v-9Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-section-label">Conheça</div>
+      <div class="footer-links-col">
+        <a href="https://www.infinityneuro.com" target="_blank" rel="noopener" class="footer-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="1.8"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          Mindsync | People Analytics
+        </a>
+        <a href="https://www.infinityneuro.com" target="_blank" rel="noopener" class="footer-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="1.8"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          Livro Mente de Aço
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Infinity Neurobusiness School · Todos os direitos reservados.</div>
+</footer>
+
+<script>
+// ─── HEADER SCROLL ───
+(function() {
+  var nav = document.getElementById('site-nav');
+  function onScroll() {
+    if (window.scrollY > 60) nav.classList.add('solid');
+    else nav.classList.remove('solid');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+// ─── GENERIC ACCORDION ───
+function initAccordion(containerSelector, contentSelector, btnSelector, signSelector, defaultOpen) {
+  var container = document.getElementById(containerSelector);
+  if (!container) return;
+  var items = Array.from(container.querySelectorAll('.acc-item'));
+  var openIndex = defaultOpen;
+
+  items.forEach(function(item, i) {
+    var btn = item.querySelector(btnSelector);
+    var content = item.querySelector(contentSelector);
+    var sign = item.querySelector(signSelector);
+    if (!btn || !content) return;
+
+    // Set initial state
+    if (i === defaultOpen) {
+      content.classList.add('open');
+      if (sign) sign.textContent = '–';
+    }
+
+    btn.addEventListener('click', function() {
+      var isOpen = content.classList.contains('open');
+
+      // Close all items
+      items.forEach(function(other) {
+        var otherContent = other.querySelector(contentSelector);
+        var otherSign = other.querySelector(signSelector);
+        if (otherContent) otherContent.classList.remove('open');
+        if (otherSign) otherSign.textContent = '+';
+      });
+      openIndex = -1;
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        content.classList.add('open');
+        if (sign) sign.textContent = '–';
+        openIndex = i;
+      }
+    });
+  });
+}
+
+// Disciplines: first item open by default
+initAccordion('disc-accordion', '.acc-content', '.acc-btn', '.acc-sign', 0);
+// FAQ: none open by default
+initAccordion('faq-accordion', '.faq-content', '.faq-btn', '.acc-sign', -1);
+
+// ─── SMOOTH ANCHOR OFFSET ───
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var id = this.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.scrollY - 96;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

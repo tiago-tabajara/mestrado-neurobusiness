@@ -1,0 +1,23 @@
+# Secrets — never upload
+.env
+.env.example
+*.key
+*.pem
+
+# Design reference — not part of production site
+design_handoff_mestrado_neurobusiness/
+
+# AIOX framework / tooling — not part of the site
+.aiox-core/
+.aiox/
+.antigravity/
+.codex/
+.cursor/
+.gemini/
+.kimi/
+.github/
+.claude/
+AGENTS.md
+
+# OS junk
+.DS_Store
