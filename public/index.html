@@ -363,15 +363,36 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
 }
 
 /* ─── BANCAS & DEFESAS ─── */
-.bancas-layout{display:flex;flex-direction:column;gap:14px}
-.bancas-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.banca-photo{border-radius:16px;overflow:hidden;background:var(--bg-dark-2)}
-.banca-photo.top{aspect-ratio:16/10}
-.banca-photo.bottom{aspect-ratio:4/3}
-.banca-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
-.banca-photo:hover img{transform:scale(1.04)}
-@media(max-width:760px){.bancas-row{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.bancas-row{grid-template-columns:1fr}}
+.banca-hero{border-radius:16px;overflow:hidden}
+.banca-hero img{width:100%;aspect-ratio:16/7;object-fit:cover;display:block}
+.banca-caption{margin-top:14px}
+.banca-caption strong{font-size:15px;color:var(--ink);font-weight:700;display:block}
+.banca-caption span{font-size:13.5px;color:var(--muted);margin-top:3px;display:block}
+.bancas-duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.bancas-duo-item{border-radius:16px;overflow:hidden}
+.bancas-duo-item img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+
+/* ─── FORMANDOS ─── */
+.formandos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.formando-card{border-radius:16px;overflow:hidden;background:var(--bg)}
+.formando-photo{aspect-ratio:3/4;overflow:hidden}
+.formando-photo img{width:100%;height:100%;object-fit:cover;display:block;object-position:50% 15%}
+.formando-info{padding:16px 18px}
+.formando-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;color:var(--ink)}
+.formando-degree{font-size:12.5px;color:var(--accent-ink);margin-top:3px}
+.formandos-cta{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:18px;padding:32px 36px;display:flex;align-items:center;gap:40px;justify-content:space-between}
+.formandos-cta-text h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(20px,2.6vw,28px);color:#0b0f1c;line-height:1.2;margin:0 0 10px}
+.formandos-cta-text p{font-size:14px;color:rgba(0,0,0,.72);margin:0;line-height:1.55}
+.formandos-cta-qr{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0}
+.formandos-cta-qr img{width:100px;height:100px;border-radius:8px;display:block}
+.formandos-cta-qr-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.65);font-family:'Space Grotesk',sans-serif}
+.formandos-cta-phone{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;color:#0b0f1c}
+@media(max-width:760px){
+  .bancas-duo{grid-template-columns:1fr}
+  .formandos-grid{grid-template-columns:1fr 1fr}
+  .formandos-cta{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){.formandos-grid{grid-template-columns:1fr}}
 
 /* WhatsApp icon fill */
 .wa-icon{fill:currentColor}
@@ -394,6 +415,7 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
         <a href="#docentes">Docentes</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#bancas">Bancas &amp; Defesas</a>
+        <a href="#formandos">Formandos</a>
         <a href="#faq">FAQ</a>
       </div>
       <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
@@ -888,36 +910,94 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
 </section>
 
 <!-- ═══════════ BANCAS & DEFESAS ═══════════ -->
-<section id="bancas" style="background:var(--bg-alt)" class="pad">
+<section id="bancas" style="background:var(--bg)" class="pad">
   <div class="container">
-    <div style="max-width:720px;margin-bottom:48px">
+    <div style="max-width:720px;margin-bottom:40px">
       <div class="section-label">Bancas &amp; Defesas</div>
       <h2 class="section-h2" style="margin-bottom:14px">Ciência que se defende em público.</h2>
       <p class="section-lead">Momentos de qualificação e defesa: onde cada mestrando apresenta sua pesquisa diante de uma banca examinadora, sustentando hipóteses, método e resultados com rigor acadêmico.</p>
     </div>
-    <div class="bancas-layout">
-      <div class="bancas-row">
-        <div class="banca-photo top">
-          <img src="images/banca.png" alt="Banca examinadora em sessão de defesa presencial" loading="lazy">
+
+    <div class="banca-hero">
+      <img src="images/defesa-apresentacao.png" alt="Mestranda apresentando dissertação à banca examinadora">
+    </div>
+    <div class="banca-caption">
+      <strong>Qualificação e Defesa presencial ou online</strong>
+      <span>Apresentação do Projeto de Pesquisa perante banca e convidados</span>
+    </div>
+
+    <div class="bancas-duo">
+      <div>
+        <div class="bancas-duo-item">
+          <img src="images/banca.png" alt="Banca examinadora — doutores e mestres avaliadores" loading="lazy">
         </div>
-        <div class="banca-photo top">
-          <img src="images/defesa-apresentacao.png" alt="Mestranda apresentando dissertação à banca" loading="lazy">
-        </div>
-        <div class="banca-photo top">
-          <img src="images/banca-online.png" alt="Banca examinadora com participação online" loading="lazy">
+        <div class="banca-caption">
+          <strong>Banca examinadora</strong>
+          <span>Doutores e mestres avaliadores</span>
         </div>
       </div>
-      <div class="bancas-row">
-        <div class="banca-photo bottom">
+      <div>
+        <div class="bancas-duo-item">
+          <img src="images/banca-online.png" alt="Qualificação híbrida — avaliadores presenciais e remotos" loading="lazy">
+        </div>
+        <div class="banca-caption">
+          <strong>Qualificação híbrida</strong>
+          <span>Avaliadores presenciais e remotos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FORMANDOS ═══════════ -->
+<section id="formandos" style="background:var(--bg-alt)" class="pad">
+  <div class="container">
+    <div style="max-width:720px;margin-bottom:40px">
+      <div class="section-label">Formandos</div>
+      <h2 class="section-h2" style="margin-bottom:14px">Mestres formados, carreiras transformadas.</h2>
+      <p class="section-lead">Alguns profissionais que concluíram o programa e hoje carregam o título de Master of Science in Neuroscience for Business, quando o programa acontecia com outra universidade.</p>
+    </div>
+
+    <div class="formandos-grid">
+      <div class="formando-card">
+        <div class="formando-photo">
+          <img src="images/defesa-suele.png" alt="Suzete Álvares Leal — Mestra em Neuroscience for Business" loading="lazy">
+        </div>
+        <div class="formando-info">
+          <div class="formando-name">Suzete Álvares Leal</div>
+          <div class="formando-degree">Master of Science · MSc</div>
+        </div>
+      </div>
+      <div class="formando-card">
+        <div class="formando-photo">
           <img src="images/defesa-karoline.png" alt="Karoline Silveira — Mestra em Neuroscience for Business" loading="lazy">
         </div>
-        <div class="banca-photo bottom">
-          <img src="images/defesa-marcio.png" alt="Márcio Harff — Mestre em Neuroscience for Business" loading="lazy">
-        </div>
-        <div class="banca-photo bottom">
-          <img src="images/defesa-suele.png" alt="Mestranda — Mestra em Neuroscience for Business" loading="lazy">
+        <div class="formando-info">
+          <div class="formando-name">Karoline Silveira</div>
+          <div class="formando-degree">Master of Science · MSc</div>
         </div>
       </div>
+      <div class="formando-card">
+        <div class="formando-photo">
+          <img src="images/defesa-marcio.png" alt="Márcio Harff — Mestre em Neuroscience for Business" loading="lazy">
+        </div>
+        <div class="formando-info">
+          <div class="formando-name">Márcio Harff</div>
+          <div class="formando-degree">Master of Science · MSc</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="formandos-cta">
+      <div class="formandos-cta-text">
+        <h3>A próxima foto de formatura pode ser a sua.</h3>
+        <p>Faça parte da próxima turma e construa um legado na sua carreira.</p>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" rel="noopener" class="formandos-cta-qr">
+        <img src="images/qr-whatsapp.png" alt="QR Code WhatsApp">
+        <span class="formandos-cta-qr-label">Aponte a câmera</span>
+        <span class="formandos-cta-phone">(51) 98424-4948</span>
+      </a>
     </div>
   </div>
 </section>
