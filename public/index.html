@@ -362,6 +362,21 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
   .hero-ctas{flex-direction:column;align-items:flex-start}
 }
 
+/* ─── BANCAS & DEFESAS ─── */
+.bancas-layout{display:flex;flex-direction:column;gap:14px}
+.bancas-top{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bancas-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.banca-photo{border-radius:16px;overflow:hidden;background:var(--bg-dark-2)}
+.banca-photo.top{aspect-ratio:16/10}
+.banca-photo.bottom{aspect-ratio:4/3}
+.banca-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.banca-photo:hover img{transform:scale(1.04)}
+@media(max-width:760px){
+  .bancas-top{grid-template-columns:1fr}
+  .bancas-bottom{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.bancas-bottom{grid-template-columns:1fr}}
+
 /* WhatsApp icon fill */
 .wa-icon{fill:currentColor}
 </style>
@@ -382,6 +397,7 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
         <a href="#metodologia">Metodologia</a>
         <a href="#docentes">Docentes</a>
         <a href="#depoimentos">Depoimentos</a>
+        <a href="#bancas">Bancas &amp; Defesas</a>
         <a href="#faq">FAQ</a>
       </div>
       <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
@@ -870,6 +886,38 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
         <div class="depo-cta-turma">3ª turma</div>
         <p class="depo-cta-lead">Faça parte da 3ª turma do programa e construa um legado na sua carreira e na sociedade.</p>
         <a href="https://api.whatsapp.com/send?phone=5551984244948" target="_blank" class="depo-cta-btn">Quero participar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BANCAS & DEFESAS ═══════════ -->
+<section id="bancas" style="background:var(--bg-alt)" class="pad">
+  <div class="container">
+    <div style="max-width:720px;margin-bottom:48px">
+      <div class="section-label">Bancas &amp; Defesas</div>
+      <h2 class="section-h2" style="margin-bottom:14px">Ciência que se defende em público.</h2>
+      <p class="section-lead">Momentos de qualificação e defesa: onde cada mestrando apresenta sua pesquisa diante de uma banca examinadora, sustentando hipóteses, método e resultados com rigor acadêmico.</p>
+    </div>
+    <div class="bancas-layout">
+      <div class="bancas-top">
+        <div class="banca-photo top">
+          <img src="images/banca.png" alt="Banca examinadora em sessão de defesa" loading="lazy">
+        </div>
+        <div class="banca-photo top">
+          <img src="images/defesa-apresentacao.png" alt="Mestranda apresentando dissertação à banca" loading="lazy">
+        </div>
+      </div>
+      <div class="bancas-bottom">
+        <div class="banca-photo bottom">
+          <img src="images/defesa-karoline.png" alt="Karoline Silveira — Mestra em Neuroscience for Business" loading="lazy">
+        </div>
+        <div class="banca-photo bottom">
+          <img src="images/defesa-marcio.png" alt="Márcio Harff — Mestre em Neuroscience for Business" loading="lazy">
+        </div>
+        <div class="banca-photo bottom">
+          <img src="images/defesa-suele.png" alt="Mestranda — Mestra em Neuroscience for Business" loading="lazy">
+        </div>
       </div>
     </div>
   </div>
