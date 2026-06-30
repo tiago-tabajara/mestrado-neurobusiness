@@ -364,18 +364,14 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
 
 /* ─── BANCAS & DEFESAS ─── */
 .bancas-layout{display:flex;flex-direction:column;gap:14px}
-.bancas-top{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.bancas-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.bancas-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .banca-photo{border-radius:16px;overflow:hidden;background:var(--bg-dark-2)}
 .banca-photo.top{aspect-ratio:16/10}
 .banca-photo.bottom{aspect-ratio:4/3}
 .banca-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
 .banca-photo:hover img{transform:scale(1.04)}
-@media(max-width:760px){
-  .bancas-top{grid-template-columns:1fr}
-  .bancas-bottom{grid-template-columns:1fr 1fr}
-}
-@media(max-width:480px){.bancas-bottom{grid-template-columns:1fr}}
+@media(max-width:760px){.bancas-row{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.bancas-row{grid-template-columns:1fr}}
 
 /* WhatsApp icon fill */
 .wa-icon{fill:currentColor}
@@ -900,15 +896,18 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
       <p class="section-lead">Momentos de qualificação e defesa: onde cada mestrando apresenta sua pesquisa diante de uma banca examinadora, sustentando hipóteses, método e resultados com rigor acadêmico.</p>
     </div>
     <div class="bancas-layout">
-      <div class="bancas-top">
+      <div class="bancas-row">
         <div class="banca-photo top">
-          <img src="images/banca.png" alt="Banca examinadora em sessão de defesa" loading="lazy">
+          <img src="images/banca.png" alt="Banca examinadora em sessão de defesa presencial" loading="lazy">
         </div>
         <div class="banca-photo top">
           <img src="images/defesa-apresentacao.png" alt="Mestranda apresentando dissertação à banca" loading="lazy">
         </div>
+        <div class="banca-photo top">
+          <img src="images/banca-online.png" alt="Banca examinadora com participação online" loading="lazy">
+        </div>
       </div>
-      <div class="bancas-bottom">
+      <div class="bancas-row">
         <div class="banca-photo bottom">
           <img src="images/defesa-karoline.png" alt="Karoline Silveira — Mestra em Neuroscience for Business" loading="lazy">
         </div>
