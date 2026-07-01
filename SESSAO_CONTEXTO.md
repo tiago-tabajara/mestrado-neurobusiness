@@ -8,7 +8,15 @@
 
 ---
 
-## O que foi feito nesta sessão
+## Sessão 2026-07-01 — O que foi feito
+
+### Correções
+- **`suzete2.png` não aparecia no site** — arquivo existia localmente mas nunca havia sido commitado. Adicionado ao repositório e publicado. Commit: `f24764c`
+- **Cabeçalho simplificado** — removidos todos os links de navegação (O Programa, Disciplinas, Metodologia, Docentes, Depoimentos, Bancas & Defesas, Formandos, FAQ). Removidos também o botão hamburguer, o CSS e o JS do menu mobile. O cabeçalho agora tem apenas o logo e o botão "Tire suas dúvidas". Commit: `a400e73`
+
+---
+
+## O que foi feito em sessões anteriores
 
 ### Novas seções adicionadas
 
@@ -86,15 +94,21 @@
 
 ---
 
-## Navegação atual do site (ordem)
+## Navegação atual do site (cabeçalho)
+
+O cabeçalho **não tem mais links de navegação**. Contém apenas:
+- Logo (link para infinityneuro.com)
+- Botão "Tire suas dúvidas" → WhatsApp `555141412090`
+
+## Seções da página (ordem de scroll)
 
 1. O Programa (`#programa`)
 2. Disciplinas (`#estrutura`)
 3. Metodologia (`#metodologia`)
 4. Docentes (`#docentes`)
 5. Depoimentos (`#depoimentos`)
-6. Bancas & Defesas (`#bancas`) ← novo
-7. Formandos (`#formandos`) ← novo
+6. Bancas & Defesas (`#bancas`)
+7. Formandos (`#formandos`)
 8. FAQ (`#faq`)
 
 ---
@@ -123,4 +137,4 @@
 
 - **Método:** `git push origin main` dispara deploy no Vercel via GitHub integration
 - **Problema atual:** o alias do domínio personalizado precisa ser atualizado manualmente após cada deploy CLI
-- **Último commit:** `1297765` — botão Inscreva-se na seção formandos
+- **Último commit:** `a400e73` — remove links de navegação do cabeçalho, mantém apenas logo e botão CTA
