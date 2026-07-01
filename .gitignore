@@ -40,3 +40,4 @@ design_handoff_mestrado_neurobusiness/
 .gemini/
 .kimi/
 AGENTS.md
+.env*
