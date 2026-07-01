@@ -146,9 +146,6 @@ a{transition:opacity .2s,color .2s,transform .2s}
   box-shadow:0 8px 30px rgba(8,12,24,.07);
 }
 .nav-inner{max-width:1200px;margin:0 auto;padding:16px 0;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{color:inherit;text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.01em;opacity:.8}
-.nav-links a:hover{opacity:1}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#0b0f1c;text-decoration:none;font-weight:600;font-size:13.5px;letter-spacing:.02em;padding:11px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 22px var(--glow)}
 .nav-cta:hover{filter:brightness(1.08)}
 
@@ -334,21 +331,7 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
 .footer-links-col{display:flex;flex-direction:column;gap:16px}
 .footer-bottom{max-width:1200px;margin:36px auto 0;padding-top:24px;border-top:1px solid var(--on-dark-line);font-size:12.5px;color:var(--on-dark-muted);text-align:center}
 
-/* ─── HAMBURGER ─── */
-#nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:300;flex-shrink:0}
-#nav-toggle span{display:block;width:24px;height:2px;background:var(--on-dark);border-radius:2px;transition:transform .25s,opacity .25s}
-#nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-#nav-toggle.open span:nth-child(2){opacity:0}
-#nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
 /* ─── RESPONSIVE ─── */
-@media(max-width:960px){
-  #nav-toggle{display:flex}
-  .nav-links{display:none;position:fixed;inset:0;background:var(--bg-dark);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:200}
-  .nav-links.open{display:flex}
-  .nav-links a{font-size:22px;font-weight:600;color:var(--on-dark);text-decoration:none;letter-spacing:-.01em}
-  .nav-links a:hover{color:var(--accent-2)}
-}
 @media(max-width:720px){.hero-h1{font-size:clamp(40px,12vw,68px)!important}}
 @media(max-width:760px){.grid-3{grid-template-columns:1fr!important}}
 @media(max-width:820px){.footer-grid{grid-template-columns:1fr!important;gap:34px!important}}
@@ -408,19 +391,6 @@ footer{background:var(--bg-dark-2);color:var(--on-dark-muted);padding:54px 24px 
       <a href="https://www.infinityneuro.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit">
         <img src="images/logo-mestrado.png" alt="Infinity Neurobusiness School — Master of Science in Neuroscience for Business" style="height:101px;width:auto">
       </a>
-      <div class="nav-links">
-        <a href="#programa">O Programa</a>
-        <a href="#estrutura">Disciplinas</a>
-        <a href="#metodologia">Metodologia</a>
-        <a href="#docentes">Docentes</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#bancas">Bancas &amp; Defesas</a>
-        <a href="#formandos">Formandos</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <a href="https://api.whatsapp.com/send?phone=555141412090" target="_blank" class="nav-cta">
         Tire suas dúvidas
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -1255,27 +1225,6 @@ initAccordion('disc-accordion', '.acc-content', '.acc-btn', '.acc-sign', 0);
 // FAQ: none open by default
 initAccordion('faq-accordion', '.faq-content', '.faq-btn', '.acc-sign', -1);
 
-// ─── HAMBURGER MENU ───
-(function() {
-  var toggle = document.getElementById('nav-toggle');
-  var navLinks = document.querySelector('.nav-links');
-  if (!toggle || !navLinks) return;
-  toggle.addEventListener('click', function() {
-    var isOpen = navLinks.classList.contains('open');
-    navLinks.classList.toggle('open');
-    toggle.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(!isOpen));
-    document.body.style.overflow = isOpen ? '' : 'hidden';
-  });
-  navLinks.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
-})();
 
 // ─── SMOOTH ANCHOR OFFSET ───
 document.querySelectorAll('a[href^="#"]').forEach(function(link) {
